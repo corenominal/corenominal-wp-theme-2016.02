@@ -109,6 +109,12 @@ blockquote {
 blockquote p:last-child {
     margin-bottom: 0;
 }
+blockquote .fa-quote-left {
+	position:absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 120%;
+}
 code,kbd,pre,samp{
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size:1em
@@ -141,7 +147,7 @@ pre code {
 	clear: both;
 	font-size: 13px;
 	padding: 4px 20px 4px 20px;
-	margin-bottom: 40px;
+	margin-bottom: 120px;
 }
 .post footer p.meta {
 	margin-bottom: 0;
@@ -151,6 +157,14 @@ pre code {
  */
 a {
 	transition: all 0.25s ease;
+}
+.post h1 a, .post h2 a {
+	text-decoration: none;
+	color: #111;
+	border-bottom: 1px solid #fff;
+}
+.post h1 a:hover, .post h2 a:hover {
+	border-bottom: 1px solid #111;
 }
 .e-content a {
 	text-decoration: none;
@@ -191,4 +205,45 @@ img {
 	max-width: 100%;
 	width: auto;
 	height: auto;
+}
+/**
+ * Layout - mobile first
+ */
+.container {
+	width: 90%;
+	margin: auto;
+}
+.container-fw {
+	width: 100%;
+	margin: auto;
+}
+/* Media Queries for responsive design -------------------------------------- */
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+    
+}
+@media only screen and (min-width: 940px) {
+  	.container {
+		width: 912px;
+	}
+@media only screen and (min-width: 1210px) {
+  	.container {
+		width: 1190px;
+	}
+}
+/**
+ * Utilities
+ */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.nowrap {
+	white-space: nowrap;
 }
