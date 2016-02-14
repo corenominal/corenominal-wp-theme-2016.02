@@ -226,6 +226,7 @@ img {
   	.container {
 		width: 912px;
 	}
+}
 @media only screen and (min-width: 1210px) {
   	.container {
 		width: 1190px;

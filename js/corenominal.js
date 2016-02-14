@@ -12,7 +12,7 @@
  */
  jQuery( document ).ready( function( $ ){
 	/**
-	 * Prevent Link titles from wrapper on the external link icon alone
+	 * Prevent Link titles from wrapping on the external link icon alone
 	 */
 	$('.post h1 a, .post h2 a').html(function()
 	{	
