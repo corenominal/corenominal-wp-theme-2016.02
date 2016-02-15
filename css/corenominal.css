@@ -384,9 +384,30 @@ a {
   	.container {
 		width: 912px;
 	}
+	.container-content {
+		padding-top: 120px;
+	}
+	.masthead {
+		height: 80px;
+		width: 100%;
+	}
+	.foologo {
+		width: 60px;
+		height: 60px;
+		margin: 10px 0;
+		cursor: pointer;
+	}
+	.site-menu {
+		top: 80px;
+	}
 	.site-menu ul {
 		margin:20px auto 40px auto;
 		width: 912px;
+	}
+	.nav-icons a {
+		padding: 0 20px;
+		line-height: 60px;
+
 	}
 	.content {
 		float: left;
@@ -408,6 +429,18 @@ a {
 		font-size: 16px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 30px;
+		font-weight: 300;
+	}
+	.post h1, .post h2 {
+		line-height: 1.44em;
+		text-transform: uppercase;
+	}
+	.post h1 i, .post h2 i {
+		font-size: 24px;
+		display:inline-block;
 	}
 }
 @media only screen and (min-width: 1210px) {
