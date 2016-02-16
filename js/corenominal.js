@@ -152,6 +152,21 @@ jQuery( document ).ready( function( $ ){
 	    }
 	});
 	/**
+	 * Scrolly shadow
+	 */
+	$( window ).scroll(function()
+	{
+		var scroll = $( window ).scrollTop();
+		if (scroll > 20)
+		{
+			$( '.masthead' ).addClass( "active" );
+		}
+		else
+		{
+			$( '.masthead' ).removeClass( "active" );
+		}
+});
+	/**
 	 * FitVids
 	 */
 	$( '.post' ).fitVids();
