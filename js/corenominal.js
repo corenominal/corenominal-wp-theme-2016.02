@@ -17,7 +17,6 @@ function foologo()
 {
 	var wrapper = document.getElementById('logo');
 	var test = document.getElementById( 'foologo' );
-	console.log( test );
 	if( test == null )
 	{
 		var canvas_el = '<canvas id="foologo" class="foologo" width="200" height="200"></canvas>';
@@ -104,7 +103,7 @@ jQuery( document ).ready( function( $ ){
 	$( 'body' ).prepend( '<div id="foologo-underlay" class="foologo-underlay"></div>' );
 	$( document ).on( 'click', '#foologo', function()
 	{
-		foologo();
+		//foologo();
 		$( '#site-menu' ).slideToggle( 'fast' );
 		$( '#foologo-underlay' ).fadeToggle( 'fast' );
 		$('body').toggleClass('noscroll');
@@ -165,7 +164,7 @@ jQuery( document ).ready( function( $ ){
 		{
 			$( '.masthead' ).removeClass( "active" );
 		}
-});
+	});
 	/**
 	 * FitVids
 	 */

@@ -18,3 +18,8 @@ require get_template_directory() . '/functions/enqueue_scripts.php';
  * Menus
  */
 require get_template_directory() . '/functions/menus.php';
+
+/**
+ * Widgets FTW!
+ */
+require get_template_directory() . '/functions/widgets.php';

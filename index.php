@@ -30,7 +30,7 @@ endwhile;
 </div>
 </div>
 <?php endif; ?>
-<?php //get_sidebar() ?>
 </div>
 <?php
+get_sidebar();
 get_footer();
