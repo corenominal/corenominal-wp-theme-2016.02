@@ -221,23 +221,45 @@ a {
 	text-decoration: none;
 	color: #111;
 	border-bottom: 1px solid #111;
+	box-shadow: 4px 0 0 #fff, -4px 0 0 #fff;
+	-webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 .e-content a:hover {
 	color: #fff;
 	background: #111;
 	border-bottom: 1px solid #111;
+	box-shadow: 4px 0 0 #111, -4px 0 0 #111;
+	-webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 .post footer a {
 	text-decoration: none;
 	color: #111;
+	border: 1px solid #fff;
 }
 .post footer a:hover {
 	color: #fff;
 	background: #111;
+	border: 1px solid #111;
+	box-shadow: 4px 0 0 #111, -4px 0 0 #111;
+	-webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 .e-content a[rel*="attachment"] { 
 	border-bottom: none;
 	background: #fff;
+	box-shadow: 0 0 0 #fff, 0 0 0 #fff;
+	-webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 .nav-icons a {
 	color: #111;
@@ -348,6 +370,9 @@ a {
 	background: #fff;
 	z-index: 510;
 	transition: all 0.25s ease;
+	opacity: 0.92;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
 }
 .masthead.active {
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(17,17,17,0.5);

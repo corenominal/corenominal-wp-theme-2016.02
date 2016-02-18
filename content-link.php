@@ -1,6 +1,9 @@
 <article class="h-entry post link">
-<h2><a class="p-name" href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank">
-<?php the_title() ?> <i class="fa fa-external-link"></i></a></h2>
+<?php if( is_single() ): ?>
+<h1><a class="p-name" href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank"><?php the_title() ?> <i class="fa fa-external-link"></i></a></h1>
+<?php else: ?>
+<h2><a class="p-name" href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank"><?php the_title() ?> <i class="fa fa-external-link"></i></a></h2>
+<?php endif; ?>
 <div class="e-content">
 <?php the_content() ?>
 </div>
