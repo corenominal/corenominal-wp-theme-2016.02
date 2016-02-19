@@ -62,6 +62,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 24px;
 	font-weight: 300;
 }
+.taxonomy-title {
+	line-height: 1.44em;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 4px 10px;
+	background: #111;
+	color: #fff;
+}
 .post h1, .post h2 {
 	line-height: 1.44em;
 	text-transform: uppercase;
@@ -252,6 +260,25 @@ a {
     -o-box-decoration-break: clone;
     box-decoration-break: clone;
 }
+.comments a {
+	text-decoration: none;
+	color: #111;
+	border: 1px solid #fff;
+	border-bottom: 1px solid #111;
+}
+.comments a:hover {
+	color: #fff;
+	background: #111;
+	border: 1px solid #111;
+	box-shadow: 4px 0 0 #111, -4px 0 0 #111;
+	-webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+.commentmetadata a {
+	border-bottom: 1px solid #fff;
+}
 .e-content a[rel*="attachment"] { 
 	border-bottom: none;
 	background: #fff;
@@ -396,8 +423,80 @@ a {
 	margin:20px auto 40px auto;
 	width: 90%;
 }
-.post {
+article.post {
 	margin-bottom: 100px;
+}
+.post,
+.comments {
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+	background: #fff;
+	border: 1px solid #fff;
+	line-height: 1.5em;
+}
+.comments .comment {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+	position: relative;
+	padding-left: 62px;
+}
+.comment .avatar {
+	position: absolute;
+	top:0;
+	left:0;
+	border: 2px solid #111;
+}
+.commentmetadata {
+	color: #111;
+	font-size: 13px;
+}
+.comments label {
+	display:block;
+	color: #111;
+}
+.comments textarea,
+.comments input[type="text"] {
+	border: 2px solid #111;
+	color: #333;
+	background: #fff;
+	width: 96%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+.comments textarea:focus,
+.comments input[type="text"]:focus {
+	border: 2px solid #111;
+	background: #fff;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(17, 17, 17, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(17, 17, 17, 0.6);
+}
+.comment-submit {
+	color: #fff;
+	background: #111;
+	border: 2px solid #fff;
+	text-align: center;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 100%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.comment-submit:hover {
+	background: #111;
+	border: 2px solid #111;
+	cursor: pointer;
 }
 .pager { display:none; }
 .sidebar { 

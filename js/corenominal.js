@@ -175,5 +175,13 @@ jQuery( document ).ready( function( $ ){
  	$( 'blockquote' ).each(function( i ) {
 		$( this ).prepend( '<i class="fa fa-quote-left"></i>' );
 	});
-
+	/**
+	 * Add a nice icon to "Post Comment" button.
+	 * Note: there is probably an easier way to do this.
+	 */
+	$( '.form-submit #submit' ).remove();
+	var str = '<button class="comment-submit" id="submit" name="submit">';
+	str += '<i class="fa fa-share"></i> Post Comment';
+	str += '</button>';
+	$( '.form-submit' ).append( str );
  });

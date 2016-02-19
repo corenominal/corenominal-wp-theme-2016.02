@@ -14,5 +14,10 @@ wp_list_comments( array(
 ) );
 ?>
 </ol>
-<?php comment_form(); ?>
+<?php
+$args = array(
+	'title_reply'	=>	'Leave a comment'
+	);
+comment_form( $args );
+?>
 </section>
