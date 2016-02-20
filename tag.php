@@ -4,16 +4,7 @@ get_header();
 <div class="container container-content">
 <section class="content">
 <?php
-switch ( strtolower( single_cat_title( '', false ) ) )
-{
-	case 'posts':
-		echo '<h1 class="taxonomy-title"><a href="' . site_url() . '">&nbsp;~&nbsp;</a> <span>Blog</span></h1>';
-		break;
-	
-	default:
-		echo '<h1 class="taxonomy-title"><a href="' . site_url() . '">&nbsp;~&nbsp;</a> <span>' . single_cat_title( '', false ) . '</span></h1>';
-		break;
-}
+echo '<h1 class="taxonomy-title"><a href="' . site_url() . '">&nbsp;~&nbsp;</a> <span>Tag: ' . single_tag_title( '', false ) . '</span></h1>';
 // The loop
 while ( have_posts() ) :
 the_post();

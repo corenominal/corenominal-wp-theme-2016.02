@@ -93,6 +93,28 @@ function foologo()
 	main();
 }
 /**
+ * For Search UX, sets character position in given element
+ */
+$.fn.selectRange = function(start, end) {
+    if(typeof end === 'undefined') {
+        end = start;
+    }
+    return this.each(function() {
+        if('selectionStart' in this) {
+            this.selectionStart = start;
+            this.selectionEnd = end;
+        } else if(this.setSelectionRange) {
+            this.setSelectionRange(start, end);
+        } else if(this.createTextRange) {
+            var range = this.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    });
+};
+/**
  * Stuff todo when the document is ready...
  */
 jQuery( document ).ready( function( $ ){
@@ -176,6 +198,12 @@ jQuery( document ).ready( function( $ ){
 		$( this ).prepend( '<i class="fa fa-quote-left"></i>' );
 	});
 	/**
+ 	 * Comment seperator
+ 	 */
+ 	$( '.comments .comment' ).each(function( i ) {
+		$( this ).append( '<i class="fa fa-minus"></i> <i class="fa fa-minus"></i>' );
+	});
+	/**
 	 * Add a nice icon to "Post Comment" button.
 	 * Note: there is probably an easier way to do this.
 	 */
@@ -184,4 +212,29 @@ jQuery( document ).ready( function( $ ){
 	str += '<i class="fa fa-share"></i> Post Comment';
 	str += '</button>';
 	$( '.form-submit' ).append( str );
+	/**
+	 * Search UX
+	 */
+	if ( $( '#s' ).length )
+	{
+		$( '.search-icon' ).hide();
+	}
+	$( '#s' ).focus();
+	var s = $( '#s' ).val().trim();
+	if( s != '' )
+	{
+		var sl = s.length;
+		$( '#s' ).focus();
+		$( '#s' ).selectRange(sl);
+	}
+	$( '.search-form' ).on( 'submit',function(e)
+	{
+		var s = $( '#s' ).val().trim();
+		if( s === '' )
+		{
+			$( '#s' ).val('');
+			$( '#s' ).focus();
+			e.preventDefault();
+		}
+	});
  });

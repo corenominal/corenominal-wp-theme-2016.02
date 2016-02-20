@@ -25,6 +25,11 @@ require get_template_directory() . '/functions/menus.php';
 require get_template_directory() . '/functions/taxonomies.php';
 
 /**
- * Widgets FTW!
+ * Widgets
  */
 require get_template_directory() . '/functions/widgets.php';
+
+/**
+ * Metaboxes
+ */
+require get_template_directory() . '/functions/metaboxes.php';

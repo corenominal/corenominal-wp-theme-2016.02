@@ -38,9 +38,6 @@ if ( function_exists( 'register_sidebar' ) ) {
 /**
  * Include all files in widgets dir
  */
-/**
- * Include all endpoints
- */
 foreach ( glob( get_template_directory() . '/functions/widgets/*.php' ) as $widget )
 {
     require_once( $widget );
