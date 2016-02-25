@@ -2,7 +2,7 @@
 /**
  * The default header template
  */
-require get_template_directory() . '/meta/default.php';
+require get_template_directory() . '/meta.php';
 ?>
 <header class="masthead">
 <div id="logo" class="container">
