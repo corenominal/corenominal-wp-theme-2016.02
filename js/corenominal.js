@@ -252,7 +252,7 @@ jQuery( document ).ready( function( $ ){
 	}
 	$( '#filter' ).on('input', function(e)
 	{
-		var filter = $(this).val();
+		var filter = $(this).val().toLowerCase();
 		if( filter === '' )
 		{
 			$( '.tags li' ).show();
@@ -261,7 +261,7 @@ jQuery( document ).ready( function( $ ){
 		{
 			$( '.tags li' ).each( function( i )
 			{
-				var haystack = $( this ).text();
+				var haystack = $( this ).text().toLowerCase();
 				if( haystack.indexOf( filter ) === -1 )
 				{
 					$( this ).removeClass( 'tag' );
