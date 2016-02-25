@@ -215,26 +215,76 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Search UX
 	 */
-	if ( $( '#s' ).length )
+	if( $( '#s' ).length > 0 )
 	{
 		$( '.search-icon' ).hide();
-	}
-	$( '#s' ).focus();
-	var s = $( '#s' ).val().trim();
-	if( s != '' )
-	{
-		var sl = s.length;
-		$( '#s' ).focus();
-		$( '#s' ).selectRange(sl);
-	}
-	$( '.search-form' ).on( 'submit',function(e)
-	{
-		var s = $( '#s' ).val().trim();
-		if( s === '' )
+		setTimeout(function()
 		{
-			$( '#s' ).val('');
 			$( '#s' ).focus();
-			e.preventDefault();
+		}, 100 ); // timeout required for weird Chrome bug
+		var s = $( '#s' ).val().trim();
+		if( s != '' )
+		{
+			var sl = s.length;
+			$( '#s' ).focus();
+			$( '#s' ).selectRange(sl);
+		}
+		$( '.search-form' ).on( 'submit',function(e)
+		{
+			var s = $( '#s' ).val().trim();
+			if( s === '' )
+			{
+				$( '#s' ).val('');
+				$( '#s' ).focus();
+				e.preventDefault();
+			}
+		});
+	}
+	/**
+	 * Tag filter
+	 */
+	if( $( '#filter' ).length > 0 )
+	{
+		setTimeout(function()
+		{
+			$( '#filter' ).focus();
+		}, 100 ); // timeout required for weird Chrome bug
+	}
+	$( '#filter' ).on('input', function(e)
+	{
+		var filter = $(this).val();
+		if( filter === '' )
+		{
+			$( '.tags li' ).show();
+		}
+		else
+		{
+			$( '.tags li' ).each( function( i )
+			{
+				var haystack = $( this ).text();
+				if( haystack.indexOf( filter ) === -1 )
+				{
+					$( this ).removeClass( 'tag' );
+					$( this ).hide();
+				}
+				else
+				{
+					$( this ).addClass( 'tag' );
+					$( this ).show();
+				}
+			});
+		}
+		var c = $( '.tag' ).length;
+		if( c === 0 )
+		{
+			if( $( '#no-results' ).length === 0 )
+			{
+				$( '.content' ).append( '<p id="no-results" class="search-no-results">Nothing, bupkis, dick, diddly-squat, zilch :(</div>' );
+			}
+		}
+		else
+		{
+			$( '#no-results' ).remove();
 		}
 	});
  });

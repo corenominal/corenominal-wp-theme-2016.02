@@ -357,7 +357,7 @@ a {
 	border-bottom: none;
 }
 ul.tags {
-	margin:40px 0 100px 0;
+	margin:40px 0 100px 20px;
 	list-style-type: none;
 }
 ul.tags li {
@@ -516,6 +516,7 @@ article.post {
 .comments textarea,
 .comments input[type="text"] {
 	border: 2px solid #111;
+	border-radius: 0;
 	color: #333;
 	background: #fff;
 	width: 96%;
@@ -539,6 +540,7 @@ article.post {
 	color: #fff;
 	background: #111;
 	border: 2px solid #fff;
+	border-radius: 0;
 	text-align: center;
 	font-family: inherit;
 	font-size: inherit;
@@ -567,9 +569,15 @@ article.post {
 	font-size: 34px;
 	width: 100%;
 	padding: 10px;
+	border-radius: 0;
 	max-width: -moz-calc(100% - 24px);
     max-width: -webkit-calc(100% - 24px);
-    max-width: calc(100% - 24px)
+    max-width: calc(100% - 24px);
+}
+.search-input:focus {
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(17, 17, 17, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(17, 17, 17, 0.6);
 }
 .search-no-results {
 	margin-bottom: 200px;

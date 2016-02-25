@@ -4,7 +4,7 @@ get_header();
 <div class="container container-content">
 <section class="content">
 <?php
-echo '<h1 class="taxonomy-title"><a href="' . site_url() . '">&nbsp;~&nbsp;</a> <span>Tag: ' . single_tag_title( '', false ) . '</span></h1>';
+echo '<h1 class="taxonomy-title"><a href="' . site_url() . '">&nbsp;~&nbsp;</a> <a href="' . site_url( 'tag' ) . '">/ Tag</a> <span>/ ' . single_tag_title( '', false ) . '</span></h1>';
 // The loop
 while ( have_posts() ) :
 the_post();
