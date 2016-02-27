@@ -48,7 +48,7 @@ table {
  * Typography
  */
 body {
-	font-size: 100%;
+	font-size: 86%;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -620,6 +620,9 @@ article.post {
     
 }
 @media only screen and (min-width: 940px) {
+  	body {
+  		font-size: 100%;
+  	}
   	.container {
 		width: 912px;
 	}
