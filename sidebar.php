@@ -15,6 +15,7 @@
 <li><a target="_blank" href="https://twitter.com/corenominal"><i class="fa fa-twitter fa-fw"></i><span class="sr-only"> Follow me on Twitter</span></a></li>
 <li><a target="_blank" href="https://github.com/corenominal"><i class="fa fa-github fa-fw"></i><span class="sr-only"> Follow me on GitHub</span></a></li>
 <li><a target="_blank" href="https://codepen.io/corenominal"><i class="fa fa-codepen fa-fw"></i><span class="sr-only"> Follow me on CodePen</span></a></li>
+<li><a target="_blank" href="https://www.reddit.com/user/corenominal/"><i class="fa fa-reddit-alien fa-fw"></i><span class="sr-only"> Follow my Reddit antics</span></a></li>
 <li><a target="_blank" href="https://uk.linkedin.com/in/corenominal"><i class="fa fa-linkedin fa-fw"></i><span class="sr-only"> Connect with me on LinkedIn</span></a></li>
 <li><a target="_blank" href="https://facebook.com/corenominal"><i class="fa fa-facebook fa-fw"></i><span class="sr-only"> Friend me on Facebook</span></a></li>
 <li><a target="_blank" href="<?php echo site_url('feed'); ?>"><i class="fa fa-rss fa-fw"></i><span class="sr-only"> Subscribe to my feed</span></a></li>
