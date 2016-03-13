@@ -18,7 +18,8 @@
     "https://plus.google.com/+PhilipNewborough",
     "https://github.com/corenominal",
     "https://codepen.io/corenominal",
-    "https://uk.linkedin.com/in/corenominal"]
+    "https://uk.linkedin.com/in/corenominal",
+    "https://www.reddit.com/user/corenominal"]
 }
 </script>
 </body>
