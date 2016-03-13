@@ -12,7 +12,7 @@
   "@type" : "Organization",
   "name" : "corenominal",
   "url" : "https://corenominal.org",
-  "logo": "https://corenominal.orglogo.png",
+  "logo": "https://corenominal.org/logo.png",
   "sameAs" : [ "http://www.facebook.com/corenominal",
     "http://www.twitter.com/corenominal",
     "https://plus.google.com/+PhilipNewborough",
