@@ -109,6 +109,9 @@ h1, h2, h3, h4, h5, h6 {
 .recent .meta {
 	font-size: 86%;
 }
+.post {
+	margin:40px 0 20px 0;
+}
 .post ol,
 .post ul,
 .comment ol,
