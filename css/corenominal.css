@@ -112,6 +112,9 @@ h1, h2, h3, h4, h5, h6 {
 .post h3 {
 	margin:40px 0 20px 0;
 }
+.post hr {
+	margin:40px 0 40px 0;
+}
 .post ol,
 .post ul,
 .comment ol,
